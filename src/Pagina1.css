@@ -1,0 +1,36 @@
+/* Option1.css */
+
+/* Estilos para el contenedor del componente */
+
+.Option1 {
+    text-align: center; /* Centrar el contenido */
+    padding: 20px;
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    font-size: 24px;
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+  
+  /* Estilos para la imagen */
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir toda su área */
+    opacity: 0.8; /* Ajusta la opacidad al valor deseado (0.7 para un 70% de opacidad) */
+    z-index: -1;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .navbar-brand i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+  }
+  

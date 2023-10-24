@@ -1,0 +1,27 @@
+/* App.css */
+.carousel-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el carrusel */
+    margin-left: auto; /* Ajusta el margen izquierdo para centrar */
+    margin-right: auto; /* Ajusta el margen derecho para centrar */
+    width: 100%;
+  }
+  .carousel h1 {
+    position: absolute;
+    top: 20%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el título al centro del div */
+    color: #3d0e0e; /* Cambia el color del texto si es necesario */
+    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+  }
+  .carousel img {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir toda su área */
+    opacity: 0.9; /* Ajusta la opacidad al valor deseado (0.7 para un 70% de opacidad) */
+    z-index: -1;
+  }
+  
