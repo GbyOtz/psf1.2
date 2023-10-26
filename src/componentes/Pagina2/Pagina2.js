@@ -1,12 +1,11 @@
 import React from 'react';
-import Card from './componentes/card';
+import Card from '../Card/Card';
 
 const Pagina2 = () => {
   return (
     <div>
-      <h1>Página 2</h1>
-      {/* Contenido de la página */}
-      <Card />
+      
+      <Card></Card>
     </div>
   );
 };

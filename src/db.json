@@ -1,0 +1,21 @@
+{
+    "categorias": [
+        {
+            "id": "bienestar",
+            "nombre": "bienestar",
+            "subcategorias": [
+                "higiene",
+                "salud"
+            ]
+        },
+        {
+            "id": "comportamiento",
+            "nombre": "comportamiento",
+            "subcategorias": [
+                "entrenamiento",
+                "educacion"
+            ]
+        }
+    ]
+    
+}

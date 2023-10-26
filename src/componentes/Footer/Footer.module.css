@@ -1,0 +1,58 @@
+/* Estilo para el pie de página */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #cce5f0; /* Cambia el color de texto según tu preferencia */
+    text-align: center;
+    color: #3e4057;
+  }
+  .container {
+    display: flex;
+    flex-direction: column; /* Alinea elementos en columnas */
+    align-items: center;
+    text-align: center; /* Centra el texto */
+    color: #3e4057;
+  }
+  
+  .social_icons {
+    display: flex;
+    flex-direction: row; /* Alinea elementos en filas */
+    justify-content: center; /* Centra elementos horizontalmente */
+    margin-top: 10px; /* Espacio entre los íconos y el texto */
+    color: #3e4057;
+  }
+  
+  
+  .social_icon {
+    display: flex;
+    flex-direction: column; /* Alinea ícono y etiqueta en columnas */
+    align-items: center;
+    margin: 0 20px; /* Espacio entre íconos */
+    color: #3e4057;
+    
+  }
+  .social_icon:hover{
+    color: rgb(192, 10, 10);
+  }
+  
+  label {
+    margin-top: 5px; /* Espacio entre el ícono y la etiqueta */
+    color: #3e4057;
+  }
+  
+  .company_info p {
+    margin: 0;
+    font-weight: bold; /* Estilo de fuente en negrita */
+  }
+  
+  /* Estilos específicos para el icono de casa */
+  .company_info svg {
+    color: #FF5733; /* Color del icono de casa */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
+  FaYoutube{
+    color: black;
+  }
+  

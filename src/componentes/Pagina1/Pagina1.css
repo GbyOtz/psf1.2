@@ -1,0 +1,73 @@
+/* Option1.css */
+
+/* Estilos para el contenedor del componente */
+
+.Option1 {
+    text-align: center; /* Centrar el contenido */
+    padding: 20px;
+  }
+  
+  /* Estilos para el título */
+  /*h1 {
+    position: absolute;
+    top: 40%; /* Centra verticalmente */
+    /*left: 50%; /* Centra horizontalmente */
+    /*transform: translate(-50%, -50%); /* Ajusta el título al centro del div */
+    /*color:black; /* Cambia el color del texto si es necesario */
+    /*font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+    /*font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid orange; /* Efecto del cursor de escritura */
+    /*white-space: nowrap;
+    margin: 0 auto; /* Para centrar el texto */
+    /*letter-spacing: .15em; /* Espacio entre las letras para dar un aspecto de máquina de escribir */
+    /*animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+  }*/
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20,end) infinite;
+    position: absolute;
+    top: 40%;
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    color: #ffff;
+    box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+ 
+
+
+  /* Estilos para la imagen */
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Ajusta la imagen para cubrir toda su área */
+   /* opacity: 0.8; /* Ajusta la opacidad al valor deseado (0.7 para un 70% de opacidad) */
+    z-index: -1;
+    filter: blur(2px);
+  
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .navbar-brand i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+  }
+  
+  
