@@ -4,6 +4,8 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;
 }
 
 h1 {
@@ -23,6 +25,10 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #CDDCDC;
+  background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+  background-blend-mode: screen, overlay;
+
 }
 
 .form-group {
@@ -36,6 +42,7 @@ h1 {
   color: #333;
   width: 100%;
   display: block;
+  text-align: center;
 }
 
 .form-group input {
@@ -44,6 +51,8 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  text-align: center;
+  background-color:mintcream;
 }
 
 .form-group select {
@@ -88,7 +97,7 @@ h1 {
   margin: 10px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   text-align: center;
 }
 
@@ -139,4 +148,19 @@ h1 {
   font-size: 30px;
   cursor: pointer;
   color: #fff;
+}
+.card-comment{
+  color: rgb(3, 1, 48);
+}
+.card-price{
+  color:brown;
+}
+.card-contact{
+  color:crimson;
+}
+.card-title{
+  color: darkred;
+}
+.card-location{
+  color:rgb(3, 1, 48);
 }

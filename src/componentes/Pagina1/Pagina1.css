@@ -26,7 +26,7 @@
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%);
     color: #111010;
-    box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 7px 8px 10px rgba(216, 29, 29, 0.5);
   }
 
 
@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: %;
     object-fit: cover; /* Ajusta la imagen para cubrir toda su área */
    /* opacity: 0.8; /* Ajusta la opacidad al valor deseado (0.7 para un 70% de opacidad) */
     z-index: -1;

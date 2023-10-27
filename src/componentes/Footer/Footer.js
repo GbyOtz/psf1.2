@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaWhatsapp } from 'react-icons/fa';
-import styles from './Footer.module.css'; // Importa los estilos
+import styles from './Footer.module.css'
 
 function Footer() {
   const iconColor = "black"; // Color negro
@@ -16,7 +16,7 @@ function Footer() {
             <label>YouTube</label>
           </div>
           <div className={styles.social_icon}>
-            <a href="https://www.instagram.com/" >
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={24} color={iconColor} /> {/* Establece el color negro */}
             </a>
             <label>Instagram</label>

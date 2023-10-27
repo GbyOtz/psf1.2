@@ -2,46 +2,46 @@ import React, { useState } from 'react';
 import './Card.css';
 
 function App() {
-  const [cards, cambioCards] = useState([""]);//iniciamos a cards en vacio
+  const [cards, cambioCards] = useState([]);//iniciamos a cards en vacio
   const [nuevaCard, cambioCard] = useState({ //newcard= nuevaCard setnewcard=cambioCard
     titulo: '',
     imgURL: '',
-    
     comentario: '',
     precio: '',
     ubicacion: '',
+    contacto: '',
   });//iniciomos a nueva card con los elementos y sin ningun valor 
 
   const cambiarCard = () => {//se crea una funcion flecha para asignar los valores para que card tome los valores nuevos valores
-    if (nuevaCard.titulo && nuevaCard.imgURL &&  nuevaCard.comentario && nuevaCard.precio) {
+    if (nuevaCard.titulo && nuevaCard.imgURL &&  nuevaCard.comentario && nuevaCard.precio && nuevaCard.contacto) {
       cambioCards([...cards, nuevaCard]);// se usan los elementos de propagacion para tomar el objeto completo y cambiar todos los valores
       cambioCard({
         titulo: '',
         imgURL: '',
-        
         comentario: '',
         precio: '',
         ubicacion: '',
+        contacto:''
       });
     }
   };
 
   const cambiarImg = (e) => {
-    const imagen = e.target.file[0];//se almacena la informacion de la imagen que se inserte a una variable
+    const imagen = e.target.files[0];//se almacena la informacion de la imagen que se inserte a una variable
 
     if (imagen) {
-      const cargar = new cambiarImg();
+      const cargar = new FileReader();//lee el archivo seleccionado por el usuario
       cargar.onload = (e) => {
-        cambiarCard({ ...nuevaCard, imgURL: e.target.result });//target result contiene la informacion de la img y la almacena en nuevaCard
+        cambioCard({ ...nuevaCard, imgURL: e.target.result });//target result contiene la informacion de la img y la almacena en nuevaCard
       };
 
-      cargar.readAsDataURL(cargar);//convierte la img en url
-    }
+      cargar.readAsDataURL(imagen);//convierte la img en url
+    };
   };
 
   return (
     <div className="app">
-      <h1>Propiedades en Venta</h1>
+      <h1>GENERA TU PUBLICIDAD</h1>
       <form className="add-card-form" onSubmit={(e) => e.preventDefault()}>
       <div className="form-group">
           <label>Título:</label>
@@ -81,6 +81,15 @@ function App() {
           />
         </div>
         <div className="form-group">
+          <label>Contacto:</label>
+          <input
+            type="number"
+            placeholder="Información de contacto"
+            value={nuevaCard.contacto}
+            onChange={(e) => cambioCard({ ...nuevaCard, contacto: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
           <label>Ubicación:</label>
           <select
             value={nuevaCard.ubicacion}
@@ -103,16 +112,17 @@ function App() {
       </form>
 
       <div className="app">
-        <h1>Tarjetas de Propiedades</h1>
+        <h1>PUBLICACIONES</h1>
         <div className="card-list">
           {cards && cards.map((card, index) => (
             <div className="card" key={index}>
                <p className="card-title">{card.titulo}</p>
               <div className="circle-container" style={{ backgroundImage: `url(${card.imgURL})` }}></div>
-              <div>{/*rescatando valores insertados*/}
-                <p>Descripcion<br/>{card.comentario}</p>
-                <p>Precio: Bs.{card.precio}</p>
-                <p>Ubicación: {card.ubicacion}/Bolivia.</p>
+              <div className='card-details'>{/*rescatando valores insertados*/}
+                <p className='card-comment'>Descripcion<br/>{card.comentario}</p>
+                <p className='card-price'>Precio: $.{card.precio}</p>
+                <p className='card-contact'>Numero de Contacto: {card.contact}</p> 
+                <p className='card-location'>Ubicación: {card.ubicacion}/Bolivia.</p>
               </div>
             </div>
           ))}
@@ -123,3 +133,4 @@ function App() {
 }
 
 export default App;
+
