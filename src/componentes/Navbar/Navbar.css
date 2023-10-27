@@ -1,13 +1,12 @@
 .navbar {
-  color: #fff;
+  color: #070000;
   display: flex;
   justify-content: space-between; /* Alinear al comienzo y al final de la barra */
   align-items: center;
   padding: 10px;
-  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
   background-blend-mode: screen;
   opacity: 0.8;
-  color: #3e4057;
+/* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
   font-family: monospace;
   
 }
@@ -67,9 +66,9 @@
   height: auto; /* Ajusta la altura automáticamente */
 }
 .texto{
-  color: #3e4057;
+  color: #000000;
   font-family: monospace;
 }
 .ico{
-  color: #3e4057;
+  color: #000000;
 }

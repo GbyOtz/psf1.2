@@ -10,13 +10,13 @@ function Footer() {
       <div className={styles.container}>
         <div className={styles.social_icons}>
           <div className={styles.social_icon}>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/" >
               <FaYoutube size={24} color={iconColor} /> {/* Establece el color negro */}
             </a>
             <label>YouTube</label>
           </div>
           <div className={styles.social_icon}>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/" >
               <FaInstagram size={24} color={iconColor} /> {/* Establece el color negro */}
             </a>
             <label>Instagram</label>
@@ -42,7 +42,7 @@ function Footer() {
         </div>
         <div className={styles.company_info}><br/>
           
-          <p>© 2023 CasaNegocios</p>
+          <label>© 2023 CasaNegocios</label>
         </div>
       </div>
     </footer>

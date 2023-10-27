@@ -1,0 +1,21 @@
+.card{
+    width:95%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+

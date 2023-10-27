@@ -2,40 +2,40 @@ import React, { useState } from 'react';
 import './Card.css';
 
 function App() {
-  const [cards, setCards] = useState([]);
-  const [newCard, setNewCard] = useState({
-    title: '',
-    imageSrc: '',
+  const [cards, cambioCards] = useState([""]);//iniciamos a cards en vacio
+  const [nuevaCard, cambioCard] = useState({ //newcard= nuevaCard setnewcard=cambioCard
+    titulo: '',
+    imgURL: '',
     
-    comment: '',
-    price: '',
-    location: '',
-  });
+    comentario: '',
+    precio: '',
+    ubicacion: '',
+  });//iniciomos a nueva card con los elementos y sin ningun valor 
 
-  const addCard = () => {
-    if (newCard.title && newCard.imageSrc &&  newCard.comment && newCard.price) {
-      setCards([...cards, newCard]);
-      setNewCard({
-        title: '',
-        imageSrc: '',
+  const cambiarCard = () => {//se crea una funcion flecha para asignar los valores para que card tome los valores nuevos valores
+    if (nuevaCard.titulo && nuevaCard.imgURL &&  nuevaCard.comentario && nuevaCard.precio) {
+      cambioCards([...cards, nuevaCard]);// se usan los elementos de propagacion para tomar el objeto completo y cambiar todos los valores
+      cambioCard({
+        titulo: '',
+        imgURL: '',
         
-        comment: '',
-        price: '',
-        location: '',
+        comentario: '',
+        precio: '',
+        ubicacion: '',
       });
     }
   };
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
+  const cambiarImg = (e) => {
+    const imagen = e.target.file[0];//se almacena la informacion de la imagen que se inserte a una variable
 
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setNewCard({ ...newCard, imageSrc: e.target.result });
+    if (imagen) {
+      const cargar = new cambiarImg();
+      cargar.onload = (e) => {
+        cambiarCard({ ...nuevaCard, imgURL: e.target.result });//target result contiene la informacion de la img y la almacena en nuevaCard
       };
 
-      reader.readAsDataURL(file);
+      cargar.readAsDataURL(cargar);//convierte la img en url
     }
   };
 
@@ -48,8 +48,8 @@ function App() {
           <input
             type="text"
             placeholder="¿Qué Vendes/Compras?"
-            value={newCard.title}
-            onChange={(e) => setNewCard({ ...newCard, title: e.target.value })}
+            value={nuevaCard.titulo}
+            onChange={(e) => cambioCard({ ...nuevaCard, titulo: e.target.value })}
           />
         </div>
 
@@ -58,7 +58,7 @@ function App() {
           <input
             type="file"
             accept="image/*"
-            onChange={handleImageUpload}
+            onChange={cambiarImg}
           />
         </div>
 
@@ -67,8 +67,8 @@ function App() {
           <input
             type="text"
             placeholder="Descripción de lo que Vendes/Compras"
-            value={newCard.comment}
-            onChange={(e) => setNewCard({ ...newCard, comment: e.target.value })}
+            value={nuevaCard.comentario}
+            onChange={(e) => cambioCard({ ...nuevaCard, comentario: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -76,15 +76,15 @@ function App() {
           <input
             type="number"
             placeholder="Precio de lo que Vendes/Compras"
-            value={newCard.price}
-            onChange={(e) => setNewCard({ ...newCard, price: e.target.value })}
+            value={nuevaCard.precio}
+            onChange={(e) => cambioCard({ ...nuevaCard, precio: e.target.value })}
           />
         </div>
         <div className="form-group">
           <label>Ubicación:</label>
           <select
-            value={newCard.location}
-            onChange={(e) => setNewCard({ ...newCard, location: e.target.value })}
+            value={nuevaCard.ubicacion}
+            onChange={(e) => cambioCard({ ...nuevaCard, ubicacion: e.target.value })}
             style={{ width: '100%' }}
           >
             <option value="">Selecciona una ubicación</option>
@@ -99,7 +99,7 @@ function App() {
             <option value="Cochabamba">Cochabamba</option>
           </select>
         </div>
-        <button onClick={addCard}>Agregar Tarjeta</button>
+        <button onClick={cambiarCard}>Agregar Tarjeta</button>
       </form>
 
       <div className="app">
@@ -107,13 +107,12 @@ function App() {
         <div className="card-list">
           {cards && cards.map((card, index) => (
             <div className="card" key={index}>
-               <p className="card-title">{card.title}</p>
-              <div className="circle-container" style={{ backgroundImage: `url(${card.imageSrc})` }}></div>
-              <div className="card-details">
-               
-                <p className="card-comment">Descripcion<br/>{card.comment}</p>
-                <p className="card-price">Precio: Bs.{card.price}</p>
-                <p className="card-location">Ubicación: {card.location}/Bolivia.</p>
+               <p className="card-title">{card.titulo}</p>
+              <div className="circle-container" style={{ backgroundImage: `url(${card.imgURL})` }}></div>
+              <div>{/*rescatando valores insertados*/}
+                <p>Descripcion<br/>{card.comentario}</p>
+                <p>Precio: Bs.{card.precio}</p>
+                <p>Ubicación: {card.ubicacion}/Bolivia.</p>
               </div>
             </div>
           ))}
